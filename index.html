@@ -4,21 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <div class="menu">
-        <img id="image-memory-icon" src="images/memory_icon.png">
-        <h1>MEMORY GAME</h1>
-    </div>
-    <div class="card">
-        <img class="image-icon" src="images/carro.png" onmouseover="showHide('JOGO DA MEMÓRIA: CARROS')" onclick="window.location.href='carros.html'">
-    </div>
-    <div class="card">
-        <img class="image-icon" src="images/jetski.png" onmouseover="showHide('JOGO DA MEMÓRIA: JETSKIS')" onclick="window.location.href='jetskis.html'">
-    </div>
-    <div class="card" onmouseover="showHide('JOGO DA MEMÓRIA: MOTOS')" onclick="window.location.href='motos.html'">
-        <img class="image-icon" src="images/moto.png">
-    </div>
+    <header class="head-div">
+        <div class="head-imagem">
+            <img src="images/memory_icon.png" class="memory-icon">
+        </div>
+        <div class="head-titulo">
+            <span class="titulo">JOGO DA MEMÓRIA DA FÓRMULA 1</span>
+        </div>
+    </header>
+    <main class="cards">
+        <h2 id="titulo_jogo">SELECIONE O JOGO</h2>
+        <a href="game/ferrarijogo.html">
+            <div class="card" onmouseover="showHide('FERRARI')" onmouseout="showHide()">
+                <img src="images/ferrari.avif" alt="Ferrari" class="card-img"> 
+            </div>
+        </a>
+        <a href="game/redbulljogo.html">
+            <div class="card" onmouseover="showHide('RED BULL')" onmouseout="showHide()">
+                <img src="images/red bull.avif" alt="Red Bull" class="card-img">
+            </div>
+        </a>
+        <a href="game/mclarenjogo.html"> 
+            <div class="card" onmouseover="showHide('MCLAREN')" onmouseout="showHide()">
+                <img src="images/mclaren.avif" alt="McLaren" class="card-img">
+            </div>
+        </a>
+    </main>
+    <footer class="footer">
+        <span class="texto-footer">Desenvolvimento Web INFO23</span>
+    </footer>
 </body>
+<script>
+    function showHide(text = "") {
+    const texto = document.getElementById('titulo_jogo');
+    
+    if (text !== "") {
+        texto.style.display = 'block';
+        texto.innerHTML = text;
+    } else {
+        texto.style.display = 'none';
+    }
+}
+</script>
 </html>

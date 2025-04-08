@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória - Red Bull</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game">
+        <h1>JOGUE AGORA</h1>
+        <hr>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/verstappen.avif" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/verstappen.avif" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/segundo-assento-red-bull.jpg" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/segundo-assento-red-bull.jpg" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/verstappen.avif" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/segundo-assento-red-bull.jpg" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/segundo-assento-red-bull.jpg" />
+        </div>
+        <div class="imagem" onclick="toggleImagem(this.querySelector('img'))">
+            <div id="imagem-fundo-redbull"></div>
+            <img src="../images/verstappen.avif" />
+        </div>
+    </div>
+</body>
+<script>
+    function toggleImagem(elemento) {
+        if (!elemento.classList.contains('show')) {
+            elemento.classList.add('show');
+        }
+    }
+</script>
+</html>
